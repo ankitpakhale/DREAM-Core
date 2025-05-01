@@ -1,0 +1,103 @@
+# python specific files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.env
+
+# jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# virtual environment
+env/
+venv/
+ENV/
+.venv/
+
+# aws credentials and config
+.aws/
+*.aws/
+
+# aws cli and cloudformation cache
+.awscli/
+
+# AWS RDS, Bedrock, S3, Lambda related files
+.rds/
+.bedrock/
+.s3/
+lambda/
+
+# logs
+.logs/
+.dream_logs/
+*.log
+*.out
+*.err
+
+# operating system files
+.DS_Store
+Thumbs.db
+
+# ide/editor specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# kafka related files
+logs/
+tmp/
+*.pid
+kafka-logs/
+zookeeper-logs/
+kafka-data/
+zookeeper-data/
+
+# ignore package dependencies
+node_modules/
+
+# caching files (e.g., from various tools)
+.dream_cache/
+.cache/
+*.cache/
+*.tgz
+
+# openai and model-specific files
+openai_cache/
+openai_api_keys.json
+openai_secrets/
+
+# ruff (python linter) cache
+.ruff_cache/
+
+# mypy (python type checker) cache
+.mypy_cache/
+
+
+# temporary files
+*.swp
+*.swo
+
+# depricated packages
+__bedrock_client
+
+# depricated files
+__base.py
+
+# egg files
+*.egg
+*.egg-info
+
+# dream egg-info
+dream.egg-info/
+
+# builds
+build
+
+
+# others
+docs.txt
+EC2
+*.pem
+.__github
+tree.md
