@@ -1,0 +1,13 @@
+# Global owner for all files
+*       @ankitpakhale
+
+# Owner for specific directories
+# /docs/  @ankitpakhale
+# /app/   @ankitpakhale
+
+# Owner for specific files
+*       @ankitpakhale
+
+# Wildcard patterns
+# *.js    @ankitpakhale
+# *.py    @ankitpakhale

@@ -1,0 +1,44 @@
+# DB Libraries
+greenlet==3.1.*
+SQLAlchemy==2.0.*
+psycopg2-binary==2.9.*
+psycopg2==2.9.*
+
+# Data Science and ML Libraries
+openai==1.58.1
+typeguard==4.4.*
+langchain==0.3.18
+langchain-community==0.3.17
+langchain-core==0.3.34
+langchain-openai==0.3.4
+langchain-text-splitters==0.3.6
+langchain-cli==0.0.35
+
+# Testing and Linting
+pytest==8.3.4
+pylint==3.3.2
+isort==5.13.2
+pre_commit==4.0.1
+pydantic==2.10.4
+pydantic-settings==2.7.1
+pydantic_core==2.27.2
+
+# Packaging and Versioning
+packaging==24.2
+setuptools==75.6.*
+tomlkit==0.13.2
+virtualenv==20.28.0
+
+# Web Frameworks and Tools
+bottle==0.13.*
+bottle-cors==0.1.*
+
+# Utility Libraries
+python-dotenv==1.0.*
+PyYAML==6.0.2
+jsonschema==4.23.*
+
+# Additional Libraries
+diskcache==5.6.*
+boto3==1.35.*
+typing_extensions==4.12.*
