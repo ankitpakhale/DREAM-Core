@@ -1,0 +1,27 @@
+{
+    "fear_of_not_making_significant_impact": {
+        "mindset_shift": "Generate a text that encourages focusing on progress over perfection, emphasizing that small actions today lead to big impacts over time.",
+        "motivation": "Create a motivational message about the power of passion and how even small victories contribute to long-term impact.",
+        "perspective": "Write a text that encourages starting with oneself and how personal growth can inspire others to follow and make a collective difference."
+    },
+    "fear_of_burnout": {
+        "mindset_shift": "Generate a message that stresses the importance of rest and recovery as an essential part of sustained productivity and creativity.",
+        "motivation": "Write a motivational text that reminds the reader they are building a sustainable life and legacy, not rushing toward short-term success.",
+        "perspective": "Create a message encouraging the importance of setting boundaries between work and personal life to prevent burnout and ensure long-term success."
+    },
+    "doubt_about_achieving_financial_freedom": {
+        "mindset_shift": "Generate a text that reframes financial freedom as a gradual journey, encouraging small, consistent steps toward long-term goals.",
+        "motivation": "Write a message that emphasizes the power of consistent effort and how daily actions, no matter how small, build toward financial freedom.",
+        "perspective": "Create a message that encourages adopting an abundance mindset and understanding that wealth is about opportunities and growth, not just money."
+    },
+    "doubt_about_successfully_scaling_investment_portfolio": {
+        "mindset_shift": "Generate a message that encourages seeing mistakes as lessons rather than failures, and highlights how each setback is a step toward mastering investment strategy.",
+        "motivation": "Write a motivational message reminding the reader they have the tools, resources, and support to adapt and succeed in scaling their investment portfolio.",
+        "perspective": "Create a text that focuses on the importance of long-term thinking in investments, stressing that success is built slowly over time with patience and strategy."
+    },
+    "final_motivation_to_push_through": {
+        "motivation": "Write a motivational message encouraging the reader to embrace fear and doubt as signs of growth, pushing them to continue on their path toward their goals.",
+        "remember_your_why": "Generate a text that reminds the reader of their greater mission and purpose, encouraging them to stay connected to their 'why' to fuel their perseverance.",
+        "believe_in_your_ability_to_adapt": "Create a motivational message that reinforces the reader’s resilience, reminding them of their ability to adapt and learn as they work toward their goals."
+    }
+}

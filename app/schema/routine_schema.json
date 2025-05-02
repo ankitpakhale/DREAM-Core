@@ -1,0 +1,77 @@
+{
+    "career": {
+        "daily_steps": {
+            "morning_routine": "Key industry trend or tech learning (30-60 mins)",
+            "deep_work": "Focused, uninterrupted work (2-3 hrs)",
+            "team_engagement": "Daily check-ins & mentoring",
+            "self_reflection": "Evening review (10-15 mins)"
+        },
+        "weekly_steps": {
+            "strategy_review": "Reassess business direction (few hrs)",
+            "team_development": "Weekly brainstorming session",
+            "networking": "2-3 high-level connections",
+            "growth_focused_learning": "Emotional intelligence or leadership (2-3 hrs)"
+        },
+        "monthly_steps": {
+            "visionary_planning": "Review long-term goals",
+            "high_impact_project": "Push boundary project",
+            "industry_engagement": "Attend industry event",
+            "mentorship": "Mentor others"
+        }
+    },
+    "finance": {
+        "daily_steps": {
+            "financial_review": "Quick daily check of financial goals (10 mins)",
+            "investment_research": "Learn about investment opportunities (15-30 mins)",
+            "wealth_mindset_practice": "Journaling or mindset development"
+        },
+        "weekly_steps": {
+            "portfolio_review": "Analyze investment performance (1-2 hrs)",
+            "smart_spending": "Reflect on and cut non-essential expenses",
+            "growth_oriented_networking": "Connect with financial advisor or consultant",
+            "financial_education": "Study personal finance or investing (2 hrs)"
+        },
+        "monthly_steps": {
+            "investment_strategy_update": "Review and adjust investments",
+            "set_financial_milestones": "Set measurable financial goals",
+            "philanthropy_focus": "Allocate 10% to philanthropy",
+            "long_term_financial_vision": "Revisit 5-10 year financial goals"
+        }
+    },
+    "relationships": {
+        "daily_steps": {
+            "connection_time": "30 minutes with loved ones",
+            "self_reflection_on_relationships": "Reflect on relationship quality (10 mins)",
+            "communication_practice": "Focus on active listening and empathy"
+        },
+        "weekly_steps": {
+            "intentional_date_quality_time": "Schedule quality time (partner/family)",
+            "social_connections": "Reach out to 2-3 people for meaningful conversations",
+            "personal_growth_together": "Engage in relationship-building activities",
+            "team_bonding": "Plan a team-building event"
+        },
+        "monthly_steps": {
+            "mentorship_support": "Offer guidance to someone close",
+            "family_partner_retreats": "Take time to disconnect (1x a month)",
+            "reflect_on_boundaries": "Ensure healthy boundaries are maintained",
+            "celebrate_milestones": "Celebrate major personal or relationship milestones"
+        }
+    },
+    "daily_routine": {
+        "morning_routine": {
+            "exercise": "30-45 mins physical activity",
+            "mindfulness": "10 mins meditation or gratitude journaling",
+            "strategic_planning": "Review top priorities for the day (10-15 mins)"
+        },
+        "workday_routine": {
+            "power_blocks": "Deep work sessions (90 mins)",
+            "team_collaboration": "Quick team sync-ups or discussions",
+            "breaks": "Regular short breaks (10-15 mins)"
+        },
+        "evening_routine": {
+            "reflection": "10-15 minutes reflecting on the day",
+            "wind_down": "Disconnect from screens, relax or engage in hobbies",
+            "prepare_for_tomorrow": "Review top 3 priorities for the next day"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "morning_mindset_ritual": {
+        "why_its_powerful": "Generate a message explaining the power of starting the day with intention, focusing on how it helps set the tone for the rest of the day and aligns with bigger goals.",
+        "what_to_do": "Create a action to include in a morning ritual that focuses on gratitude, visualization, and mindful breathing or meditation.",
+        "long_term_impact": "Write a message describing the long-term impact of daily mindset rituals, highlighting growth mindset, resilience, and alignment with long-term goals."
+    },
+    "focused_learning": {
+        "why_its_powerful": "Generate a message explaining the importance of consistently investing in personal and professional development, and how it helps stay ahead in emerging fields.",
+        "what_to_do": "Create a action for daily focused learning, such as reading, listening to podcasts, or taking courses related to career, investments, and personal development.",
+        "long_term_impact": "Write about the long-term benefits of daily learning, such as increased expertise, informed decision-making, and long-term success in career and investments."
+    },
+    "daily_investment_tracking": {
+        "why_its_powerful": "Generate a message emphasizing the importance of daily tracking and managing finances to make better investment decisions and stay aligned with financial goals.",
+        "what_to_do": "Create a daily action for reviewing investments and market trends, such as checking stocks, real estate, and setting up automated systems.",
+        "long_term_impact": "Write about the long-term benefits of daily investment tracking, such as gaining valuable insights and confidence in scaling an investment portfolio toward financial freedom."
+    },
+    "relationship_building": {
+        "why_its_powerful": "Generate a message that highlights the power of building and nurturing relationships daily, both personally and professionally, and how they contribute to success.",
+        "what_to_do": "Create a daily action for relationship-building, such as spending quality time with loved ones, connecting with mentors, or practicing active listening.",
+        "long_term_impact": "Write about the long-term impact of consistent relationship-building, such as creating a strong support network and fostering a fulfilling personal and professional life."
+    },
+    "daily_reflection_and_goal_review": {
+        "why_its_powerful": "Generate a message explaining the importance of daily reflection to stay connected to long-term goals and make necessary adjustments to stay on track.",
+        "what_to_do": "Create a action for daily reflection, including reviewing progress, identifying areas for improvement, and adjusting goals based on daily insights.",
+        "long_term_impact": "Write about the long-term benefits of daily reflection and goal review, such as building self-awareness, accountability, and ensuring continuous progress toward long-term goals."
+    },
+    "the_big_picture": {
+        "summary": "Generate a summary that emphasizes how incorporating daily habits leads to long-term success and fulfillment, with each small action contributing to the bigger picture.",
+        "reminder": "Create a reminder about how success is built daily, encouraging consistency in habits and trusting that small actions will create massive long-term results."
+    }
+}

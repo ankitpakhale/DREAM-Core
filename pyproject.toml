@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "dream"
+name = "DREAM"
 version = "0.1.0"
-description = "Kustomized Assessment & NLP-based Hyperpersonalized Audit"
+description = "Dynamic Realization Engine for Achieving Milestones"
 authors = ["Ankit Pakhale <akp3067@gmail.com>"]
 license = "MIT"
 readme = "README.md"
@@ -42,7 +42,7 @@ testpaths = ["tests"]
 
 [tool.black]
 line-length = 88
-target-version = ['py310']
+target-version = ['py312']
 
 [tool.isort]
 profile = "black"
