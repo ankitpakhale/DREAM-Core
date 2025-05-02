@@ -1,1 +1,5 @@
-ignore = ["F401"] # Ignore the "unused import" rule (F401)
+line-length = 88  # sets the global line length for formatting and E501
+
+[lint]
+select = ["E", "F"]       # Enables all E and F rules
+ignore = ["F401", "E501"]         # Ignores 'unused import' errors
