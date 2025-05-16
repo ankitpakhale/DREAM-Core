@@ -50,7 +50,7 @@ class ResponseManager:
         },
         Exception: {
             "status_code": 500,
-            "message": lambda e: f"Dream Internal Server Error: {e.message}",
+            "message": lambda e: f"Dream Internal Server Error: {e}",
         },
     }
 
