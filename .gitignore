@@ -101,3 +101,6 @@ EC2
 *.pem
 .__github
 tree.md
+
+# duplicate files
+*copy*
