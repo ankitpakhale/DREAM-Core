@@ -114,7 +114,7 @@ Follow these steps to set up **DREAM-Core** on your local environment.
 
 ### Prerequisites
 
--   Python 3.8+
+-   Python 3.10+
 
 -   GroqAI API credentials (needed for interacting with the LLM)
 
@@ -126,9 +126,8 @@ Follow these steps to set up **DREAM-Core** on your local environment.
 1.  Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/DREAM-Core.git
+    git clone https://github.com/ankitpakhale/DREAM-Core.git
     cd DREAM-Core
-
     ```
 
 2.  Create a virtual environment:
@@ -223,4 +222,10 @@ We welcome contributions to **DREAM-Core**! If you'd like to contribute, please 
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under a **custom, strictly restricted license**.
+
+- **Use, copying, modification, distribution, and deployment are all prohibited.**
+- This includes personal, educational, and commercial purposes.
+- You may only view the code. No other actions are allowed.
+
+See [LICENSE.md](./LICENSE.md) for full terms.

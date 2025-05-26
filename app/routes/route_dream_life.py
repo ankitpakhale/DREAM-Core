@@ -2,6 +2,20 @@ from app.framework import App, Request
 from app.services import dream_life_generation_service
 from app.utils import logger, handle_response
 from app.utils.constants import ROUTES
+import os
+import json
+
+
+def construct_sample_payload():
+    parent_path = os.path.dirname(__file__).split("/")[:-2]
+    relative_schema_path = ["app", "sample_data", "dream_life_response.json"]
+    parent_path.extend(relative_schema_path)
+    schema_path = "/".join(parent_path)
+
+    with open(schema_path, "r", encoding="utf-8") as f:
+        output_schema = json.load(f)
+
+    return output_schema
 
 
 class DreamLifeRoute:
@@ -98,8 +112,8 @@ class DreamLifeRoute:
         logger.debug(f"Received payload: {payload}")
 
         # Start dream using the service
-        response = dream_life_generation_service.execute_task(payload=payload)
-
+        # response = dream_life_generation_service.execute_task(payload=payload)
+        response = construct_sample_payload()
         return {
             "payload": response,
             "message": "Dream has been successfully completed!",
