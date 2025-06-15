@@ -9,6 +9,8 @@ from app.utils.constants import PROMPT_TYPE, PROMPT_CATEGORY, PAYLOAD_CATEGORY
 import json
 import os
 from app.services.validation_manager import ValidationManager
+from app.utils import retry
+from app.config import GeneralConfig
 
 # ------------------------------
 # Domain model for Routine Generator response
@@ -158,7 +160,8 @@ class RoutineGenerator(BaseGenerator):
     ) -> None:
         return ValidationManager(validation_type=payload_type).validate(payload)
 
-    def generate(self, payload: Dict[str, Any]) -> Any:
+    @retry(max_retries=GeneralConfig.RETRY_COUNT, delay=1, backoff=2)
+    async def generate(self, payload: Dict[str, Any]) -> Any:
         # load the output-schema for system prompt from JSON file
         parent_path = os.path.dirname(__file__).split("/")[:-2]
         relative_schema_path = ["schema", "routine_schema.json"]
@@ -182,7 +185,7 @@ class RoutineGenerator(BaseGenerator):
             schema={"USER_DATA": payload},
         )
 
-        raw_output = GroqAIClient.get_response(
+        raw_output = await GroqAIClient.get_response(
             system_prompt=system_prompt, user_prompt=user_prompt
         )
 
@@ -190,7 +193,7 @@ class RoutineGenerator(BaseGenerator):
         output_parser = PydanticOutputParser(pydantic_object=FullRoutine)
         parsed_result = output_parser.parse(raw_output)
         result = parsed_result.model_dump()
-        logger.debug("result: %s", result)
+        # logger.debug("result: %s", result)
 
         # validate the parsed result
         self._validate(

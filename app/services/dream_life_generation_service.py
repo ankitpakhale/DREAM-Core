@@ -1,8 +1,6 @@
 from typing import Dict, Any
-from app.utils import retry
 from app.services.validation_manager import ValidationManager
 from app.utils import id_generator
-from app.config import GeneralConfig
 from app.utils.constants import PAYLOAD_CATEGORY
 from .generators import (
     routine_generator,
@@ -26,8 +24,7 @@ class DreamLifeGenerationService:
         return cls._instance
 
     @staticmethod
-    @retry(max_retries=GeneralConfig.RETRY_COUNT, delay=1, backoff=2)
-    def execute_task(payload: Dict[str, str]) -> Any:
+    async def execute_task(payload: Dict[str, str]) -> Any:
         """
         Executes a task by validating the request,
         interacting with the GroqAIClient to generate a Dream Life,
@@ -41,9 +38,11 @@ class DreamLifeGenerationService:
 
         # TODO: Rename *_generator to some other meaningful name, generator name belongs to py generator
         dream_life = {
-            "routine": routine_generator.generate(payload),
-            "fear_and_motivation": fear_and_motivation_generator.generate(payload),
-            "daily_habit": daily_habit_generator.generate(payload),
+            "routine": await routine_generator.generate(payload),
+            "fear_and_motivation": await fear_and_motivation_generator.generate(
+                payload
+            ),
+            "daily_habit": await daily_habit_generator.generate(payload),
         }
 
         # add IDs & return it
