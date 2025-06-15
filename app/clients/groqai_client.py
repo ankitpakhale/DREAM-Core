@@ -1,10 +1,9 @@
 import json
-from typing import Dict, Any
 
 from app.utils import logger
-from app.config import GroqAIConfig  # now using Groq configuration
+from app.config import GroqAIConfig
 
-from groq import Groq  # Import Groq client
+from groq import AsyncGroq
 
 
 # ------------------------------
@@ -12,8 +11,7 @@ from groq import Groq  # Import Groq client
 # ------------------------------
 class GroqAIClient:
     @staticmethod
-    def get_response(system_prompt: str, user_prompt: str) -> Dict[str, Any]:
-
+    async def get_response(system_prompt: str, user_prompt: str) -> str:
         # prepare the messages for the Groq chat completions API
         messages = [
             {"role": "system", "content": system_prompt},
@@ -21,10 +19,10 @@ class GroqAIClient:
         ]
 
         # instantiate the Groq client using API key from GroqAIConfig
-        groq_client = Groq(api_key=GroqAIConfig.GROQ_API_KEY)
+        groq_client = AsyncGroq(api_key=GroqAIConfig.GROQ_API_KEY)
 
         # call the Groq chat completions API with parameters from the configuration
-        completion = groq_client.chat.completions.create(
+        completion = await groq_client.chat.completions.create(
             model=GroqAIConfig.GROQ_MODEL,
             messages=messages,
             temperature=GroqAIConfig.GROQ_TEMPERATURE,

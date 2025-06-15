@@ -9,6 +9,8 @@ from app.utils.constants import PROMPT_TYPE, PROMPT_CATEGORY, PAYLOAD_CATEGORY
 import json
 import os
 from app.services.validation_manager import ValidationManager
+from app.utils import retry
+from app.config import GeneralConfig
 
 
 # ------------------------------
@@ -60,7 +62,8 @@ class DailyHabitGenerator(BaseGenerator):
     ) -> None:
         ValidationManager(validation_type=payload_type).validate(payload)
 
-    def generate(self, payload: Dict[str, Any]) -> Any:
+    @retry(max_retries=GeneralConfig.RETRY_COUNT, delay=1, backoff=2)
+    async def generate(self, payload: Dict[str, Any]) -> Any:
         # load the output-schema for system prompt from JSON file
         parent_path = os.path.dirname(__file__).split("/")[:-2]
         relative_schema_path = ["schema", "daily_habits_schema.json"]
@@ -82,7 +85,7 @@ class DailyHabitGenerator(BaseGenerator):
             schema={"USER_DATA": payload},
         )
 
-        raw_output = GroqAIClient.get_response(
+        raw_output = await GroqAIClient.get_response(
             system_prompt=system_prompt, user_prompt=user_prompt
         )
 
@@ -96,6 +99,7 @@ class DailyHabitGenerator(BaseGenerator):
         self._validate(
             payload=result, payload_type=PAYLOAD_CATEGORY.DAILY_HABIT_GENERATOR_DATA
         )
+        print(f"==>> result: {result}")
         return result
 
 

@@ -112,8 +112,8 @@ class DreamLifeRoute:
         logger.debug(f"Received payload: {payload}")
 
         # Start dream using the service
-        # response = dream_life_generation_service.execute_task(payload=payload)
-        response = construct_sample_payload()
+        response = await dream_life_generation_service.execute_task(payload=payload)
+        # response = construct_sample_payload()
         return {
             "payload": response,
             "message": "Dream has been successfully completed!",
