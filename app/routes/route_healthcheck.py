@@ -1,5 +1,6 @@
 from app.framework import App
 from app.utils import logger, handle_response
+from app.utils import cache
 from app.utils.constants import ROUTES
 
 
@@ -17,7 +18,8 @@ class HealthcheckRoute:
 
     @staticmethod
     @handle_response
-    def _healthcheck_handler():
+    @cache
+    async def _healthcheck_handler():
         """
         Handle the healthcheck of the system.
         """
