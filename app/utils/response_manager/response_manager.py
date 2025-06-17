@@ -105,7 +105,7 @@ def handle_response(func: Callable) -> Callable:
     async def wrapper(*args, **kwargs) -> Dict[str, Any]:
         try:
             # call original; if it returns a coroutine, await it
-            result = func(*args, **kwargs)
+            result = await func(*args, **kwargs)
             if inspect.isawaitable(result):
                 result = await result
             return manager.handle_success(result)

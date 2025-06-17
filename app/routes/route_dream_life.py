@@ -1,6 +1,7 @@
 from app.framework import App, Request
 from app.services import dream_life_generation_service
 from app.utils import logger, handle_response
+from app.utils import cache
 from app.utils.constants import ROUTES
 import os
 import json
@@ -31,6 +32,7 @@ class DreamLifeRoute:
         return cls._instance
 
     @handle_response
+    @cache
     async def __generate_dream_life_handler(self, request: Request):
         """
         Handle the dream based on the payload.
