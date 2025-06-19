@@ -1,4 +1,3 @@
-from app.framework import Request
 import inspect
 from app.utils import logger
 from typing import Any, Callable
@@ -137,6 +136,8 @@ def cache(func):
 
     def generate_cache_key_from_form_data():
         try:
+            from app.framework import Request
+
             form_data = {}
             if hasattr(Request, "forms") and Request.forms:
                 possible_fields = [
