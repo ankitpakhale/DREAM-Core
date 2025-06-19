@@ -12,7 +12,8 @@ logger.debug("Registering all Routes...")
 route_manager.register_all()
 logger.debug("All Routes are Registered")
 
-if __name__ == "__main__":
+
+def main():
     __port = GeneralConfig.APP_PORT
     __host = GeneralConfig.APP_HOST
     logger.debug(f"➡ Starting server on port {__port} and host {__host}...")
@@ -22,3 +23,7 @@ if __name__ == "__main__":
         port=__port,
         reload=False if GeneralConfig.ENV.lower() == "prod" else True,
     )
+
+
+if __name__ == "__main__":
+    main()

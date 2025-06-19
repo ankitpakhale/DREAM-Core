@@ -84,6 +84,9 @@ __bedrock_client
 # depricated files
 __base.py
 
+# depricated files
+__*
+
 # egg files
 *.egg
 *.egg-info
@@ -93,6 +96,9 @@ dream.egg-info/
 
 # builds
 build
+
+# aws builds, layers
+*_layer*
 
 
 # others

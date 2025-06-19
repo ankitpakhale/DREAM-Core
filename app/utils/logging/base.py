@@ -23,8 +23,8 @@ def get_logger(name="DREAM", level="DEBUG"):
     logger.addHandler(ch)
 
     # add custom monthly rotating file handler
-    fh = handlers.monthly_rotating_file_handler()
-    logger.addHandler(fh)
+    # fh = handlers.monthly_rotating_file_handler()
+    # logger.addHandler(fh)
 
     logger.setLevel(level=__level)
     return logger

@@ -1,10 +1,7 @@
-# app/utils/response_manager.py
-
 from typing import Callable, Any, Dict
 from functools import wraps
 import inspect
 
-from app.framework import Response, JSONResponse
 from app.utils import logger
 from json.decoder import JSONDecodeError
 from jsonschema.exceptions import ValidationError
@@ -59,6 +56,8 @@ class ResponseManager:
 
     def set_status(self, status_code: int) -> None:
         self.status_code = status_code
+        from app.framework import Response
+
         Response.status = status_code
 
     def handle_exception(self, exception: Exception) -> Dict[str, Any]:
@@ -70,6 +69,7 @@ class ResponseManager:
         logger.critical(f"Error ({info['status_code']}): {msg}", exc_info=True)
 
         self.set_status(info["status_code"])
+        from app.framework import JSONResponse
 
         return JSONResponse(
             status_code=info["status_code"],
@@ -81,9 +81,11 @@ class ResponseManager:
             },
         )
 
-    def handle_success(self, result: Dict[str, Any]) -> JSONResponse:
+    def handle_success(self, result: Dict[str, Any]) -> Any:
         status_code = result.get("status_code", 200)
         self.set_status(status_code)
+        from app.framework import JSONResponse
+
         return JSONResponse(
             status_code=status_code,
             content={
